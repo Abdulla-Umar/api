@@ -30,8 +30,8 @@
           - docker exec server-container npm run migrate    => to migrate up the database
           - docker exec server-container npm run test       => to run the test script
 
-#### port number for database (5432)
-#### port number for server (3000) 
+### port number for database (5432)
+### port number for server (3000) 
 
 
 ## Endpoints 
@@ -74,10 +74,10 @@
 
 ## Database schema 
 
-- Products Table =>  [ name , category , price , id ]
-- Users Table => [ first_name, last_name , username , password , id ]
-- Orders Table => [id , status , user_id]
-- Order-Products join table => [id , quantity , order_id , product_id ]
+- Products Table =>  [ name VARCHAR, category VARCHAR, price integer, id (SERIAL PRIMARY KEY)]
+- Users Table => [ first_name VARCHAR, last_name VARCHAR, username VARCHAR, password VARCHAR, id SERIAL PRIMARY KEY]
+- Orders Table => [id SERIAL PRIMARY KEY , status VARCHAR(64), user_id bigint]
+- Order-Products join table => [id SERIAL PRIMARY KEY , quantity integer , order_id bigint, product_id bigint ]
 
 
 

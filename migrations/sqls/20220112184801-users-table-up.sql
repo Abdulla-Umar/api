@@ -1,2 +1,2 @@
 CREATE TABLE users(first_name VARCHAR ,last_name VARCHAR,username VARCHAR, password VARCHAR, id SERIAL PRIMARY KEY);
-INSERT INTO users(first_name,last_name,username,password) VALUES ('Abdalla' ,'Omar' ,'abdallaOmar' , '123456');
+INSERT INTO users(first_name,last_name,username,password) VALUES ('Abdalla' ,'Omar' ,'abdallaOmar' , '$2b$10$yt/xNninZAjm9S1frcyXPu4yNqhTFIdA3lHQfRQuqs0JMzdYC.hRq');

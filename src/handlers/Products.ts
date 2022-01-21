@@ -7,17 +7,32 @@ const {TOKEN_SECRET}  = process.env
 const store = new ProductModel();
 
 const index = async (req: Request, res: Response) => {
-  const result = await store.index();
-  res.json({ result });
+  try {
+    const result = await store.index();
+    res.json({ result });
+  } catch (error) {
+    res.status(400)
+    res.json(error)
+  }
 };
 const show = async (req: Request, res: Response) => {
-  const result = await store.show(req.params.id);
-  res.json(result);
+  try {
+    const result = await store.show(req.params.id);
+    res.json(result);
+  } catch (error) {
+    res.status(400)
+    res.json(error)
+  }
 };
 
 const Delete = async (req: Request, res: Response) => {
-  const result = await store.delete(req.params.id);
-  res.json(result);
+  try {
+    const result = await store.delete(req.params.id);
+    res.json(result);
+  } catch (error) {
+    res.status(400)
+    res.json(error)
+  }
 };
 const create = async (req: Request, res: Response) => {
   const newProduct: Product = {

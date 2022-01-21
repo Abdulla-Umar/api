@@ -72,7 +72,7 @@ const index = async (req: Request , res: Response) => {
 const show =async (req:Request , res: Response) => {
     try {
         const result = await userModel.show(req.params.id)
-        res.json()
+        res.json(result)
     } catch (error) {
         res.send(error)
     }
