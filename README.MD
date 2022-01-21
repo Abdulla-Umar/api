@@ -1,4 +1,14 @@
 ## Steps to start the app 
+- add .env file with these variables
+      POSTGRES_HOST = db
+      POSTGRES_DB = store
+      POSTGRES_TEST_DB = store_test 
+      POSTGRES_USER = admin
+      POSTGRES_PASSWORD = 123456
+      BCRYPT_PEPPER = bcrypt123
+      SALT_ROUNDS = 10
+      TOKEN_SECRET = token123
+      ENV = dev
 
 - make sure that you have docker desktop on your machine
 
