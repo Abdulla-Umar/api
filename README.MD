@@ -7,9 +7,6 @@
      - BCRYPT_PEPPER 
      - SALT_ROUNDS 
      - TOKEN_SECRET 
-     -
-
-
 
 ## Endpoints 
 
